@@ -22,7 +22,7 @@ def users():
 @app.route('/create_test_alumnos', methods = ['GET'])
 def create_test_alumnos():
     db_session = db.getSession(engine)
-    alumno = entities.Alumno(nombre="Piero", apellido="Morales", carrera="Ciencia de la computación")
+    alumno = entities.Alumno(nombre="Piero", apellido="Morales", carrera="Ciencia de la computacion")
     db_session.add(alumno)
     db_session.commit()
     return "Test alumnos created!"
